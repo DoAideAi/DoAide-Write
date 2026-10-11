@@ -43,7 +43,7 @@ export function getStandaloneHtml(htmlContent, title = 'Document') {
       border-top: 1px solid #e5e7eb;
       margin-top: 3rem;
     }
-    .doaide-watermark a { color: #F0B429; text-decoration: none; }
+    .doaide-watermark a { color: #0D9488; text-decoration: none; }
   </style>
 </head>
 <body>

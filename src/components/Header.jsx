@@ -41,9 +41,10 @@ export default function Header({ theme, setTheme, previewTheme, setPreviewTheme,
             <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
           </svg>
         </button>
-        <div className="flex items-baseline gap-0.5 select-none">
-          <span className="text-sm font-semibold tracking-tight" style={{ color: 'var(--color-ink-900)' }}>DoAide</span>
-          <span className="text-sm font-display italic" style={{ color: 'var(--color-gold)' }}>Write</span>
+        <div className="flex items-center gap-1.5 select-none">
+          <span className="text-sm font-semibold tracking-tight" style={{ color: 'var(--da-primary)' }}>DoAide</span>
+          <span className="text-sm" style={{ color: 'var(--color-ink-400)' }}>|</span>
+          <span className="text-sm font-medium" style={{ color: 'var(--color-ink-700)' }}>Write</span>
         </div>
       </div>
 

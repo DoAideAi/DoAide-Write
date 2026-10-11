@@ -21,9 +21,10 @@ export default function NavBar() {
     <nav className="sticky top-0 z-50 border-b"
       style={{ borderColor: 'var(--color-border)', background: 'var(--color-paper)' }}>
       <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-        <Link to="/" className="flex items-baseline gap-0.5 select-none no-underline">
-          <span className="text-lg font-semibold tracking-tight" style={{ color: 'var(--color-ink-900)' }}>DoAide</span>
-          <span className="text-lg font-display italic" style={{ color: 'var(--color-gold)' }}>Write</span>
+        <Link to="/" className="flex items-center gap-2 select-none no-underline">
+          <span className="text-lg font-semibold tracking-tight" style={{ color: 'var(--da-primary)' }}>DoAide</span>
+          <span className="text-lg" style={{ color: 'var(--color-ink-400)' }}>|</span>
+          <span className="text-lg font-medium" style={{ color: 'var(--color-ink-700)' }}>Write</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-6">

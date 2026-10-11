@@ -16,9 +16,10 @@ export default function SharedView({ content, isDark }) {
     <div className="h-full flex flex-col" style={{ background: 'var(--color-canvas)' }}>
       <header className="flex items-center justify-between h-11 px-4 border-b flex-shrink-0"
         style={{ borderColor: 'var(--color-border)', background: 'var(--color-paper)' }}>
-        <div className="flex items-baseline gap-1">
-          <span className="text-sm font-semibold" style={{ color: 'var(--color-ink-900)' }}>DoAide</span>
-          <span className="text-sm font-display italic" style={{ color: 'var(--color-gold)' }}>Write</span>
+        <div className="flex items-center gap-1.5">
+          <span className="text-sm font-semibold" style={{ color: 'var(--da-primary)' }}>DoAide</span>
+          <span className="text-sm" style={{ color: 'var(--color-ink-400)' }}>|</span>
+          <span className="text-sm font-medium" style={{ color: 'var(--color-ink-700)' }}>Write</span>
           <span className="text-xs ml-2 px-2 py-0.5 rounded-full" style={{ background: 'var(--color-surface)', color: 'var(--color-ink-500)' }}>
             Shared Document
           </span>

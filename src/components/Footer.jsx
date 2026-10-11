@@ -7,9 +7,10 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-baseline gap-0.5 mb-3">
-              <span className="text-lg font-semibold" style={{ color: 'var(--color-ink-900)' }}>DoAide</span>
-              <span className="text-lg font-display italic" style={{ color: 'var(--color-gold)' }}>Write</span>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-lg font-semibold" style={{ color: 'var(--da-primary)' }}>DoAide</span>
+              <span className="text-lg" style={{ color: 'var(--color-ink-400)' }}>|</span>
+              <span className="text-lg font-medium" style={{ color: 'var(--color-ink-700)' }}>Write</span>
             </div>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-ink-500)' }}>
               Free writing tools for everyone. No login required, no data stored on servers.
@@ -42,7 +43,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--color-ink-400)' }}>
-              Company
+              DoAide Products
             </h4>
             <div className="flex flex-col gap-2">
               <a href="https://doaide.com" target="_blank" rel="noopener noreferrer"
@@ -56,10 +57,10 @@ export default function Footer() {
           <p className="text-xs" style={{ color: 'var(--color-ink-400)' }}>
             &copy; {new Date().getFullYear()} DoAide. All rights reserved.
           </p>
-          <p className="text-xs" style={{ color: 'var(--color-ink-400)' }}>
-            Made with care by the <a href="https://doaide.com" target="_blank" rel="noopener noreferrer"
-              style={{ color: 'var(--color-gold)' }}>DoAide</a> team
-          </p>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium"
+            style={{ background: 'var(--color-gold-bg)', color: 'var(--da-primary)' }}>
+            A DoAide Product
+          </span>
         </div>
       </div>
     </footer>

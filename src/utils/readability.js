@@ -56,7 +56,7 @@ export function analyzeReadability(text) {
   let level, color
   if (clampedEase >= 80) { level = 'Very Easy'; color = '#22c55e' }
   else if (clampedEase >= 70) { level = 'Easy'; color = '#4ade80' }
-  else if (clampedEase >= 60) { level = 'Standard'; color = '#F0B429' }
+  else if (clampedEase >= 60) { level = 'Standard'; color = '#0D9488' }
   else if (clampedEase >= 50) { level = 'Fairly Difficult'; color = '#f97316' }
   else if (clampedEase >= 30) { level = 'Difficult'; color = '#ef4444' }
   else { level = 'Very Difficult'; color = '#dc2626' }

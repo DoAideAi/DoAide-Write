@@ -44,7 +44,7 @@
 
 /* Minimal Theme */
 .preview-theme-minimal {
-  font-family: 'Schibsted Grotesk', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   color: #374151;
   line-height: 1.7;
   max-width: 640px;
@@ -73,7 +73,7 @@
 
 /* Night Theme */
 .preview-theme-night {
-  font-family: 'Schibsted Grotesk', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   color: #c9d1d9;
   line-height: 1.6;
   background: #0d1117;
