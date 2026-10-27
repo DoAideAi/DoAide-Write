@@ -1,6 +1,6 @@
 import express from 'express'
-import { readFileSync } from 'fs'
-import { join } from 'path'
+import { existsSync, readFileSync } from 'fs'
+import { join, normalize, sep } from 'path'
 
 const PORT = parseInt(process.env.PORT || '3057', 10)
 const HOST = process.env.HOST || '172.18.0.1'
@@ -86,7 +86,11 @@ app.post('/api/ai', async (req, res) => {
 
 app.use(express.static(DIST, { maxAge: '1d', index: false }))
 
-app.get('/{*path}', (_req, res) => {
+app.get('/{*path}', (req, res) => {
+  // Prerendered routes (scripts/prerender-routes.mjs) have their own
+  // index.html with that page's meta; everything else gets the SPA shell.
+  const page = join(DIST, normalize(req.path), 'index.html')
+  if (page.startsWith(DIST + sep) && existsSync(page)) return res.sendFile(page)
   res.setHeader('Content-Type', 'text/html')
   res.send(indexHtml)
 })

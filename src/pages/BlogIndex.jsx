@@ -1,12 +1,7 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { blogPosts } from '../data/blog'
 
 export default function BlogIndex() {
-  useEffect(() => {
-    document.title = 'Blog — DoAide Write'
-  }, [])
-
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold mb-2" style={{ color: 'var(--color-ink-900)' }}>Blog</h1>

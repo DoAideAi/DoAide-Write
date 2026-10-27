@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Link, useParams } from 'react-router-dom'
 import { tools } from '../data/tools'
@@ -72,12 +72,6 @@ export default function ToolPage() {
   const [result, setResult] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
-
-  useEffect(() => {
-    if (tool) {
-      document.title = `${tool.name} — DoAide Write`
-    }
-  }, [tool])
 
   if (!tool) {
     return (

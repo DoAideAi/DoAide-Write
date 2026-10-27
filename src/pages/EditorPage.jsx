@@ -34,10 +34,6 @@ export default function EditorPage() {
   const splitContainerRef = useRef(null)
 
   useEffect(() => {
-    document.title = 'Markdown Editor — DoAide Write'
-  }, [])
-
-  useEffect(() => {
     const handler = () => setIsMobile(window.innerWidth < 768)
     window.addEventListener('resize', handler)
     return () => window.removeEventListener('resize', handler)
@@ -85,6 +81,7 @@ export default function EditorPage() {
 
   return (
     <div className="h-screen flex flex-col overflow-hidden" style={{ background: 'var(--color-canvas)', color: 'var(--color-ink-900)' }}>
+      <h1 className="sr-only">Markdown Editor</h1>
       <Header
         theme={theme}
         setTheme={setTheme}

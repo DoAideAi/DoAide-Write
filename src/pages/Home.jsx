@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { blogPosts } from '../data/blog'
 import { tools } from '../data/tools'
@@ -12,10 +11,6 @@ const toolIcons = {
 }
 
 export default function Home() {
-  useEffect(() => {
-    document.title = 'DoAide Write — Free AI Writing Tools & Markdown Editor'
-  }, [])
-
   return (
     <div>
       {/* Hero */}

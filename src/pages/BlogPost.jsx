@@ -1,78 +1,11 @@
-import { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Link, useParams } from 'react-router-dom'
 import { blogPosts, getBlogBySlug } from '../data/blog'
 
-function BlogJsonLd({ post }) {
-  const blogPosting = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: {
-      '@type': 'Organization',
-      name: 'DoAide',
-      url: 'https://doaide.com',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'DoAide',
-      url: 'https://doaide.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://write.doaide.com/favicon.svg',
-      },
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `https://write.doaide.com/blog/${post.slug}`,
-    },
-    url: `https://write.doaide.com/blog/${post.slug}`,
-    wordCount: post.content.trim().split(/\s+/).length,
-    inLanguage: 'en',
-  }
-
-  const schemas = [blogPosting]
-
-  if (post.faqs && post.faqs.length > 0) {
-    schemas.push({
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: post.faqs.map(faq => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer,
-        },
-      })),
-    })
-  }
-
-  return (
-    <>
-      {schemas.map((schema, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      ))}
-    </>
-  )
-}
 
 export default function BlogPost() {
   const { slug } = useParams()
   const post = getBlogBySlug(slug)
-
-  useEffect(() => {
-    if (post) {
-      document.title = `${post.title} — DoAide Write Blog`
-    }
-  }, [post])
 
   if (!post) {
     return (
@@ -95,8 +28,6 @@ export default function BlogPost() {
         <span>/</span>
         <span style={{ color: 'var(--color-gold)' }} className="truncate">{post.title}</span>
       </div>
-
-      <BlogJsonLd post={post} />
 
       <article>
         <header className="mb-8">
