@@ -84,7 +84,7 @@ app.post('/api/ai', async (req, res) => {
   }
 })
 
-app.use(express.static(DIST, { maxAge: '1d', index: false }))
+app.use(express.static(DIST, { maxAge: '1d', index: false, redirect: false }))
 
 app.get('/{*path}', (req, res) => {
   // Prerendered routes (scripts/prerender-routes.mjs) have their own
